@@ -9,13 +9,13 @@ app.use(express.json());
 app.post('/convert', async (req: Request, res: Response) => {
   try {
     const mathml: string = req.body.mathml;
-    console.log(mathml);
+    // console.log(mathml);
     if (!mathml) {
       res.status(400).json({ error: 'No MathML content provided.' });
       return;
     }
     const latex = MathMLToLaTeX.convert(mathml);
-    console.log(latex);
+    // console.log(latex);
     res.json({ latex });
   } catch (error) {
     // Using a type guard to check if error is an Error
