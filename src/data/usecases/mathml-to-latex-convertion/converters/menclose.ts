@@ -29,7 +29,7 @@ export class MEnclose implements ToLaTeXConverter {
     if (this._notation === 'madruwb') return `\\underline{${latexJoinedChildren}\\right|}`;
     if (this._notation === 'phasorangle') return `{\\angle \\underline{${latexJoinedChildren}}}`;
 
-    return `\\overline{\\left.\\right)${latexJoinedChildren}}`;
+    return `\\overline{)${latexJoinedChildren}}`;
   }
 
   private get _notation(): string {

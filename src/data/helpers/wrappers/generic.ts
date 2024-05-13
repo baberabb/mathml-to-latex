@@ -5,8 +5,8 @@ export class GenericWrapper {
   protected _close: string;
 
   constructor(open: string, close: string) {
-    this._open = '\\left' + open;
-    this._close = '\\right' + close;
+    this._open = open;
+    this._close = close;
   }
 
   wrap(str: string): string {
